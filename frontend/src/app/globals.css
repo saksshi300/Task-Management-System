@@ -1,0 +1,122 @@
+/* ============================================================
+   TASKFLOW GLOBAL STYLES
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #1a1a2e;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+.auth-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #0f3460;
+  box-shadow: 0 0 0 0.2rem rgba(15, 52, 96, 0.15);
+}
+
+.btn-primary-custom {
+  background: linear-gradient(135deg, #0f3460, #e94560);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.65rem 1.5rem;
+  transition:
+    opacity 0.2s ease,
+    transform 0.1s ease;
+  width: 100%;
+}
+
+.btn-primary-custom:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  color: white;
+}
+.btn-primary-custom:active {
+  transform: translateY(0);
+  color: white;
+}
+.btn-primary-custom:disabled {
+  opacity: 0.7;
+  color: white;
+}
+
+.stat-card {
+  border-radius: 16px;
+  border: none;
+  transition: transform 0.2s ease;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.empty-state {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #6c757d;
+}
+.empty-state .icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in-up {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+@media (max-width: 576px) {
+  .tasks-grid {
+    grid-template-columns: 1fr;
+  }
+  .auth-card {
+    padding: 1.75rem;
+  }
+}
